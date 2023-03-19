@@ -20,3 +20,30 @@ I'll add various/random codes/notes here
 |to_string|string|Converts bitset to std::string.|
 |to_ulong|ulong|COnverts bitset to std::ulong|
 
+
+## 2) LIS
+
+### Longest Increasing Subsequnce n(log(n))
+
+    int n;cin>>n;
+    int ar[n+1]={0};
+
+    vector<int>v;
+    for (int i=1; i<=n; i++ )
+    {
+        int x;
+        cin >> x;v.pb(x);
+    }
+    deque<int>dq;
+    for(int i:v){
+        if(dq.size()==0)dq.pb(i);
+        else{
+            int ind = lower_bound(dq.begin(),dq.end(),i)-dq.begin();
+            if(ind==dq.size())dq.pb(i);
+            else{
+                dq[ind]=i;
+            }
+        }
+    }
+    cout<<dq.size()<<endl;
+
