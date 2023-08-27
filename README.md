@@ -5,7 +5,7 @@ I'll add various/random codes/notes here
 
 
 ## 1) Bitset
-```cpp
+
 #### 
 
 | Function | return type     | Description                |
@@ -20,7 +20,7 @@ I'll add various/random codes/notes here
 |to_string|string|Converts bitset to std::string.|
 |to_ulong|ulong|COnverts bitset to std::ulong|
 
-```
+
 ## 2) LIS
 
 ### Longest Increasing Subsequnce n(log(n))
