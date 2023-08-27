@@ -99,12 +99,15 @@ I'll add various/random codes/notes here
 ```
 ## Binary Search
 ```cpp
-    l=0
-    r=n+1
-    while(l<r){
-        mid = l+(r-l)/2;
-        if(arr[mid]<f) l=mid+1;
-        else r=mid;
-    }
-    return mid;
+        function<int(int,int,int[])> binarySearch = [](int n,int f,int arr[]){
+            int l=0,r=n+1;
+            while(l<r){
+                  int mid = l+(r-l)/2;
+                  if(arr[mid]<f){
+                        l=mid+1;
+                  }
+                  else r=mid;
+            }
+            return l;
+      };
 ```
