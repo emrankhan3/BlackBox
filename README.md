@@ -111,3 +111,4 @@ I'll add various/random codes/notes here
             return l;
       };
 ```
+## Segment Tree
