@@ -98,6 +98,9 @@ I'll add various/random codes/notes here
     };
 ```
 ## Binary Search
+- lower bound of x  = l
+- upper bound of x = lower bound of (x+1)
+- last postion of x amoung all x = (lower bound of (x+1))-1
 ```cpp
         function<int(int,int,int[])> binarySearch = [](int n,int f,int arr[]){
             int l=0,r=n+1;
