@@ -1,11 +1,10 @@
 
 # BlacK BoX
 ## Table of contents
-
- **[Binary Search](#Binary-Search)**<br>
- **[Bitset](#Bitset)**<br>
- **[Longest Increasing Subsequence](#LIS)**<br>
- **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br> 
+**[Binary Search](#Binary-Search)**<br> 
+**[Bitset](#Bitset)**<br> 
+**[Longest Increasing Subsequence](#LIS)**<br>
+**[Maximum Xor Subarray](#Max-Xor-Subarray)**<br>
 
 ### Bitset
 
