@@ -1,8 +1,8 @@
 
-# CP note
+# BlacK BoX
+## Table of contents
 
-I'll add various/random codes/notes here
-
+**[Binary Search](#Binary-Search)**<br>
 
 ## 1) Bitset
 
