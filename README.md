@@ -1,5 +1,5 @@
 
-# BlacK BoX
+# BLACK BOX  (KALA BAXO)
 ## Table of contents
 **[Binary Search](#Binary-Search)**<br> 
 **[Bitset](#Bitset)**<br> 
