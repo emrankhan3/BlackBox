@@ -4,10 +4,10 @@
 
 + **[Binary Search](#Binary-Search)**<br>
 + **[Bitset](#Bitset)**<br>
-+ **[Longest Increasing Subsequence](#LIS)<br>
-+ **[Maximum Xor Subarray](#Max-Xor-Subarray)<br> 
++ **[Longest Increasing Subsequence](#LIS)**<br>
++ **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br> 
 
-## 1) Bitset
+## Bitset
 
 #### 
 
@@ -24,7 +24,7 @@
 |to_ulong|ulong|COnverts bitset to std::ulong|
 
 
-## 2) LIS
+## LIS
 
 ### Longest Increasing Subsequnce n(log(n))
 ```cpp
