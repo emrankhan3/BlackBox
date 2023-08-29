@@ -7,7 +7,7 @@
 + **[Longest Increasing Subsequence](#LIS)**<br>
 + **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br> 
 
-## Bitset
+### Bitset
 
 #### 
 
@@ -24,9 +24,9 @@
 |to_ulong|ulong|COnverts bitset to std::ulong|
 
 
-## LIS
+### LIS
 
-### Longest Increasing Subsequnce n(log(n))
+#### Longest Increasing Subsequnce n(log(n))
 ```cpp
     int n;cin>>n;
     int ar[n+1]={0};
@@ -100,7 +100,7 @@
         }
     };
 ```
-## Binary Search
+### Binary Search
 - lower bound of x  = l
 - upper bound of x = lower bound of (x+1)
 - last postion of x amoung all x = (lower bound of (x+1))-1
@@ -117,4 +117,4 @@
             return l;
       };
 ```
-## Segment Tree
+### Segment Tree
