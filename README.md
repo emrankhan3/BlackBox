@@ -50,6 +50,7 @@
     cout<<dq.size()<<endl;
 ```
 ### Max Xor Subarray 
+
 ```cpp
     struct TrieNode{
         int value;
@@ -60,7 +61,7 @@
         }
     };
 
-    class tro{
+    class VAR{
     public:
         void insert(TrieNode *root,int pre_xor){
             TrieNode *temp = root;
@@ -98,6 +99,9 @@
             return result;
         }
     };
+// create a VAR type variable e.g. VAR mxxorsub
+// let the array with size n is arr[n],
+// the max xor subarray is mxxorsub(arr,n) 
 ```
 ### Binary Search
 - lower bound of x  = l
