@@ -5,6 +5,7 @@
 **[Bitset](#Bitset)**<br> 
 **[Longest Increasing Subsequence](#LIS)**<br>
 **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br>
+**[Binary Exponentiation](#Binary-Exponentiation)**<br>
 
 ### Bitset
 
@@ -122,3 +123,18 @@
 ```
 ### Segment Tree
 will be added
+
+### Binary Exponentiation
+```cpp
+      function<ll(ll,ll)>binExp = [](ll a, ll b){
+            ll r = 1;
+            while(b){
+                  if(b&1){
+                        r = (r*a)%mod;
+                  }
+                  a=(a*a)%mod;
+                  b>>=1;
+            }
+            return r;
+      };
+```
