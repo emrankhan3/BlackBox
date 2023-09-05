@@ -1,5 +1,14 @@
 
 # BLACK BOX  (KALA BAXO)
+    \------------\
+    | \------------\
+    | |           |
+    | |           |
+     \-|---------\|
+      \-----------\
+
+
+
 ## Table of contents
 **[Disjoint Set Union](#Disjoint-Set-Union)**<br> 
 **[Binary Search](#Binary-Search)**<br> 
