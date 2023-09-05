@@ -1,6 +1,7 @@
 
 # BLACK BOX  (KALA BAXO)
 ## Table of contents
+**[Disjoint Set Union](#Disjoint-Set-Union)**<br> 
 **[Binary Search](#Binary-Search)**<br> 
 **[Bitset](#Bitset)**<br> 
 **[Longest Increasing Subsequence](#LIS)**<br>
@@ -24,7 +25,46 @@
 |to_ulong|ulong|COnverts bitset to std::ulong|
 
 
-### LIS
+#### Disjoint Set Union
+"
+১. যারা পরস্পরের বন্ধু তারা সবাই একই সেটের অন্তর্গত 
+
+২. যতগুলো সাবগ্রাফ থাকবে ততগুলো সেট থাকবে
+
+৩. প্রতিটি সেটের একটি representative থাকবে।
+
+৪. দুটি নোডের representativeএকই হলে তারা একই সেটে আছে। সুতরাং দুজন ব্যক্তি বন্ধু নাকি বুঝতে আমাদের তারা যে সেটে আছে তার representative চেক করতে হবে।
+"
+from shafaet vai er blog
+```cpp
+class dsu{
+      vector<ll>parent,sz;
+      int n;
+public:
+      dsu(int n){
+            for(int i=0; i<=n; i++){
+                  sz.pb(0);
+                  parent.pb(i);
+            }
+      }
+      int findParent(int x){
+            if(parent[x]==x)return x;
+            return parent[x]=findParent(parent[x]);
+      }
+      bool uunion(int a,int b){
+            int aa,bb;
+            aa = findParent(a);
+            bb = findParent(b);
+            if(aa==bb)return false;
+            if(sz[aa]<sz[bb])swap(aa,bb);
+            parent[bb]=aa;
+            sz[aa]+=sz[bb];
+
+            return true;
+      }
+
+};
+```
 
 #### Longest Increasing Subsequnce n(log(n))
 ```cpp
