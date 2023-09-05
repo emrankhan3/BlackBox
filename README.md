@@ -51,7 +51,7 @@ public:
             if(parent[x]==x)return x;
             return parent[x]=findParent(parent[x]);
       }
-      bool uunion(int a,int b){
+      bool _union(int a,int b){
             int aa,bb;
             aa = findParent(a);
             bb = findParent(b);
