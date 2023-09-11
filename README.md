@@ -187,3 +187,7 @@ will be added
             return r;
       };
 ```
+
+### bit operations
+### string algos
+
