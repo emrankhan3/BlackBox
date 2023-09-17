@@ -46,33 +46,47 @@
 "
 from shafaet vai er blog
 ```cpp
-class dsu{
-      vector<ll>parent,sz;
+class dsu{     // class dsu, dsu mydsu(n)
+      vector<ll>p,sz,mx,mn;    // p = parent, sz = size of the tree, mx = max node, mn = min node
       int n;
 public:
       dsu(int n){
             for(int i=0; i<=n; i++){
-                  sz.pb(0);
-                  parent.pb(i);
+                  sz.pb(1);
+                  mx.pb(i);
+                  mn.pb(i);
+                  p.pb(i);
             }
       }
-      int findParent(int x){
-            if(parent[x]==x)return x;
-            return parent[x]=findParent(parent[x]);
+      int get(int x){          // returns the parent of the node
+            if(p[x]==x)return x;
+            return p[x]=get(p[x]);
       }
-      bool _union(int a,int b){
-            int aa,bb;
-            aa = findParent(a);
-            bb = findParent(b);
-            if(aa==bb)return false;
-            if(sz[aa]<sz[bb])swap(aa,bb);
-            parent[bb]=aa;
-            sz[aa]+=sz[bb];
+      int findMin(int x){     // returns the min node of the tree
+            return mn[get(x)];
+      }
 
+      int findMax(int x){         // return the max node of the tree
+            return mx[get(x)];
+      }
+      int ts(int x){               // returns the size of the tree
+            return sz[get(x)];
+      }
+      bool _union(int a,int b){     // unites two node
+            a = get(a);
+            b = get(b);
+            if(a==b)return false;
+            if(sz[a]<sz[b])swap(a,b);
+            p[b]=a;
+            sz[a]+=sz[b];
+
+            mn[a]=mn[b] = min(mn[a],mn[b]);
+            mx[a]=mx[b] = max(mx[a],mx[b]);
             return true;
       }
 
 };
+
 ```
 
 #### Longest Increasing Subsequnce n(log(n))
