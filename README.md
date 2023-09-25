@@ -15,7 +15,6 @@
 **[Binary Exponentiation](#Binary-Exponentiation)**<br>
 **[Disjoint Set Union](#Disjoint-Set-Union)**<br> 
 **[Knapsack 2D](#Knapsack-2D)**<br> 
-
 **[Longest Increasing Subsequence](#LIS)**<br>
 **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br>
 
