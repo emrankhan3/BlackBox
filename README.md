@@ -204,4 +204,5 @@ will be added
 
 ### bit operations
 ### string algos
+### trie
 
