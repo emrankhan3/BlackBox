@@ -10,12 +10,14 @@
 
 
 ## Table of contents
-**[Disjoint Set Union](#Disjoint-Set-Union)**<br> 
 **[Binary Search](#Binary-Search)**<br> 
 **[Bitset](#Bitset)**<br> 
+**[Binary Exponentiation](#Binary-Exponentiation)**<br>
+**[Disjoint Set Union](#Disjoint-Set-Union)**<br> 
+**[Knapsack 2D](#Knapsack-2D)**<br> 
+
 **[Longest Increasing Subsequence](#LIS)**<br>
 **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br>
-**[Binary Exponentiation](#Binary-Exponentiation)**<br>
 
 ### Bitset
 
@@ -201,7 +203,54 @@ will be added
             return r;
       };
 ```
+### Knapsack 2D
+```cpp
+     
+int n,w;
+int nap[5][100002];
+ 
+void knapsack()
+{
+ 
+    cin >> n >> w;
+ 
+    int profit[n+1]={0};
+    int weights[n+1]={0};
+ 
+    for (int i = 1; i <= n; ++i)
+    {
+        cin >>  weights[i];
+        /* code */
+    }
+    for (int i = 1; i <= n; ++i)
+    {
+        cin >>  profit[i];
+        /* code */
+    }
+    int now,bef;
+    now=1,bef=0;
+    int mx=0;
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=1; j<=w; j++)
+        {
+            nap[now][j]=max(nap[bef][j],nap[now][j]);
+            if(j>=weights[i])
+            {
+                int m = max(0ll,j-weights[i]);
+                // nap[i][j] = max(nap[i][j],profit[i]);
+ 
+                nap[now][j]=max(nap[now][j],profit[i]+nap[bef][m]);
+                mx=max(nap[bef][j],mx);
+                mx=max(nap[now][j],mx);
+            }
+        }
+        swap(now,bef);
+    }
+    cout<<mx<<endl;
+}
 
+```
 ### bit operations
 ### string algos
 ### trie
