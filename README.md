@@ -13,6 +13,7 @@
 **[Binary Search](#Binary-Search)**<br> 
 **[Bitset](#Bitset)**<br> 
 **[Binary Exponentiation](#Binary-Exponentiation)**<br>
+**[Binary Indexed Tree](#Binary-Indexed-Tree)**<br>
 **[Disjoint Set Union](#Disjoint-Set-Union)**<br> 
 **[Knapsack 2D](#Knapsack-2D)**<br> 
 **[Longest Increasing Subsequence](#LIS)**<br>
@@ -408,6 +409,54 @@ public:
             }
             return l;
       };
+```
+### Binary Indexed Tree
+```cpp
+     
+ll prex[200005]; // prefix sum array
+ll tre[200005]; // BIT Tree
+class bit{
+/*
+      How to use
+      create a bit object e.g:   bit btree(array,size_of_ar);
+      get sum using btree.sum(leftIdx,rightIdx)
+      update using btree.update(idx,value)
+*/
+public:
+      bit(ll ar[],ll n){
+            // calculating prefix
+            for(int i=1;i<=n; i++){
+                 prex[i]=prex[i-1]+ar[i];
+            }
+            // creating tree with
+            for(int i=1; i<=n; i++){
+                  int ii = i;
+                  int jj = i-(i&-i)+1;
+                  tre[i]+=prex[ii]-prex[jj-1];
+            }
+      }
+      void update(int idx,ll v){
+            while(idx<200000){
+                  tre[idx]+=v;
+                  idx+=idx&-idx;
+            }
+      }
+      ll s(int i){
+            ll ss=0;
+            while(i>0){
+                //  dbg1(i)
+                  ss+=tre[i];
+                  i-=(i&-i);
+            }
+            return ss;
+      }
+      ll sum(int i,int j){
+           // dbg1(i)
+            return s(j)-s(i-1);
+      }
+};
+
+
 ```
 ### Segment Tree
 will be added
