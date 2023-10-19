@@ -18,6 +18,7 @@
 **[Knapsack 2D](#Knapsack-2D)**<br> 
 **[Longest Increasing Subsequence](#LIS)**<br>
 **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br>
+**[Segment Tree](#Segment-Tree)**<br>
 [template](https://docs.google.com/document/d/1lYzO9yA8irpCsG2a782awObOndtlUjAusC2iHV9Ea7E/edit#heading=h.cmhs406hkp1w)
 ### Bitset
 
