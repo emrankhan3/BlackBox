@@ -19,6 +19,7 @@
 **[Longest Increasing Subsequence](#LIS)**<br>
 **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br>
 **[Segment Tree](#Segment-Tree)**<br>
+**[Segment Tree Lazy Propagation](#Segment-Tree-Lazy-Propagation)**<br>
 [template](https://docs.google.com/document/d/1lYzO9yA8irpCsG2a782awObOndtlUjAusC2iHV9Ea7E/edit#heading=h.cmhs406hkp1w)
 ### Bitset
 
@@ -499,6 +500,79 @@ void update(int v, int tl, int tr, int pos, int new_val) {
     }
 }
 void update(int idx, int v){update(1,1,n,idx,v);} // update value at index idx 
+
+```
+
+### Segment Tree Lazy Propagation
+```cpp
+     #define mx 100005
+// const int mod = 998244353, MAX = 3000005, INF = 1 << 30;
+
+
+ll n;
+ll arr[mx];
+struct info {
+    ll prop, sum;
+} tree[mx * 4];
+
+void init(int node, int b, int e)
+{
+    if (b == e) {
+        tree[node].sum = arr[b];
+        return;
+    }
+    int Left = node * 2;
+    int Right = node * 2 + 1;
+    int mid = (b + e) / 2;
+    init(Left, b, mid);
+    init(Right, mid + 1, e);
+    tree[node].sum = tree[Left].sum + tree[Right].sum;
+}
+void init(int a,int b){
+      init(1,a,b);
+}
+
+void update(int node, int b, int e, int i, int j, ll x)
+{
+    if (i > e || j < b)
+        return;
+    if (b >= i && e <= j)
+    {
+        tree[node].sum += ((e - b + 1) * x);
+        tree[node].prop += x;
+        return;
+    }
+    int Left = node * 2;
+    int Right = (node * 2) + 1;
+    int mid = (b + e) / 2;
+    update(Left, b, mid, i, j, x);
+    update(Right, mid + 1, e, i, j, x);
+    tree[node].sum = tree[Left].sum + tree[Right].sum + (e - b + 1) * tree[node].prop;
+}
+void update(int a,int b,int v){
+      update(1,1,n,a,b,v);
+}
+
+ll query(int node, int b, int e, int i, int j, ll carry = 0)
+{
+    if (i > e || j < b)
+        return 0;
+
+    if (b >= i and e <= j)
+        return tree[node].sum + carry * (e - b + 1);
+
+    int Left = node << 1;
+    int Right = (node << 1) + 1;
+    int mid = (b + e) >> 1;
+
+    ll p1 = query(Left, b, mid, i, j, carry + tree[node].prop);
+    ll p2 = query(Right, mid + 1, e, i, j, carry + tree[node].prop);
+
+    return p1 + p2;
+}
+ll query(int i,int j){
+      return query(1,1,n,i,j,0);
+}
 
 ```
 
