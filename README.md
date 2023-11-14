@@ -83,28 +83,6 @@ using ordered_map = tree<key, value, cmp, rb_tree_tag, tree_order_statistics_nod
 #define visar(x) for(int i:x) cerr<<i<<" "; cerr<<endl;
 #define v2dar(n,m,ar) for(int i=0;i<n;i++){for(int j=0; j<m;j++)cout<<ar[i][j]<<" ";cout<<'\n';
 
-// const int mod = 998244353, MAX = 3000005, INF = 1 << 30;
-template <typename Ta>
-void ddd ( Ta a )
-{
-    dbg1 ( a )
-}
-template <typename Ta, typename tb>
-void ddd ( Ta a, tb b )
-{
-    dbg2 ( a, b )
-}
-template <typename Ta, typename tb, typename tc>
-void ddd ( Ta a, tb b, tc c )
-{
-    dbg3 ( a, b, c )
-}
-template <typename Ta, typename tb, typename tc, typename td>
-void ddd ( Ta a, tb b, tc c, td d )
-{
-    dbg4 ( a, b, c, d )
-}
-
 template <typename Ta>
 Ta min ( Ta a, Ta b, Ta c ) {return min ( a, min ( b, c ) );}
 template <typename Ta>
@@ -112,22 +90,17 @@ Ta min ( Ta a, Ta b, Ta c, Ta d ) {return min ( a, min ( b, c, d ) );}
 template <typename Ta>
 Ta max ( Ta a, Ta b, Ta c ) {return max ( a, max ( b, c ) );}
 template <typename Ta>
-Ta max ( Ta a, Ta b, Ta c, Ta d ) {return max ( a, max ( b, c, d ) );}
-const ll mod = 1e9 + 7;
+Ta max ( Ta a, Ta b, Ta c, Ta d ) {return max ( a, max ( b, c, d ) )
 
+const ll mod = 1e9 + 7;
 const ll eps  = 1e-9 ;
 const ll maxn = 4e5 + 5;
 const ll inf  = 5e18 ;
 const ll minf = -inf ;
 
 ll inv ( ll i ) {if ( i == 1 ) return 1; return ( mod - ( ( mod / i ) * inv ( mod % i ) ) % mod ) % mod;}
-
 ll mod_mul ( ll a, ll b ) {a = a % mod; b = b % mod; return ( ( ( a * b ) % mod ) + mod ) % mod;}
-
 ll mod_add ( ll a, ll b ) {a = a % mod; b = b % mod; return ( ( ( a + b ) % mod ) + mod ) % mod;}
-
-
-
 ll gcd ( ll a, ll b ) { if ( b == 0 ) return a; return gcd ( b, a % b );}
 
 ll ceil_div ( ll a, ll b ) {return a % b == 0 ? a / b : a / b + 1;}
@@ -135,82 +108,9 @@ ll pwr ( ll a, ll b )
 {
     a %= mod;
     ll res = 1;
-
     while ( b > 0 ) {if ( b & 1 ) res = res * a % mod; a = a * a % mod; b >>= 1;}
-
     return res;
 }
-
-
-
-void rd ( ll &a )
-{
-    scanf ( "%lld", &a );
-}
-int Bexpo ( int b, int p )
-{
-    int a = 1;
-
-    if ( p == 0 ) { return 0; }
-
-    while ( p > 0 ) {
-        if ( p & 1 ) {
-            a *= b;
-            a %= mod;
-        }
-
-        p >>= 1;
-        b *= b;
-        b %= mod;
-    }
-
-    return a;
-}
-
-
-
-class dsu{
-      vector<ll>p,sz,mx,mn;
-      int n;
-public:
-      dsu(int n){
-            for(int i=0; i<=n; i++){
-                  sz.pb(1);
-                  mx.pb(i);
-                  mn.pb(i);
-                  p.pb(i);
-            }
-      }
-      int get(int x){
-            if(p[x]==x)return x;
-            return p[x]=get(p[x]);
-      }
-      int findMin(int x){
-            return mn[get(x)];
-      }
-
-      int findMax(int x){
-            return mx[get(x)];
-      }
-      int s(int x){
-            return sz[get(x)];
-      }
-      bool _union(int a,int b){
-            a = get(a);
-            b = get(b);
-            if(a==b)return false;
-            if(sz[a]<sz[b])swap(a,b);
-            p[b]=a;
-            sz[a]+=sz[b];
-
-            mn[a]=mn[b] = min(mn[a],mn[b]);
-            mx[a]=mx[b] = max(mx[a],mx[b]);
-            return true;
-      }
-
-};
-
-int m[200005];
 
 int32_t main()
 {
@@ -220,39 +120,8 @@ int32_t main()
     ofstream cout ( "output.txt" );
 #endif
     old
-
-
       function<void ( int ) > kick = [&] ( int qwer ) {
             ll a,b,n,k,value;
-            cin>>n>>k;
-            vector<int>v[n+1];
-            for (int i=1; i<=n; i++ )
-            {
-                  
-                m[x]=0
-            }
-            for (int i=1; i<=k; i++ )
-            {
-                int x;
-                cin >> x;
-                m[x]=1;
-            }
-            for (int i=2; i<=n; i++ )
-            {
-                int x,y;
-                cin >> x>>y;
-                  v[x].pb(y);
-                  v[y].pb(x);
-            }
-            int l=1, r=n;
-            int ans=n-1;
-            while(l<r){
-                  int mid = (l+r)/2;
-                  int d = 1;
-                  function<
-            }
-
-
       };
 ty
     kick ( 6 );
