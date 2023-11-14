@@ -39,7 +39,7 @@
 
 
 <details>
-<summary>How do I dropdown?</summary>
+<summary>Temp?</summary>
 <br>#include <bits/stdc++.h>
 using namespace std;
 
