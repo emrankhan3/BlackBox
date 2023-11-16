@@ -18,6 +18,7 @@
 **[Knapsack 2D](#Knapsack-2D)**<br> 
 **[Longest Increasing Subsequence](#LIS)**<br>
 **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br>
+**[Minimum Spanning Tree Prims](#MST-Prim's)**<br>
 **[Segment Tree](#Segment-Tree)**<br>
 **[Segment Tree Lazy Propagation](#Segment-Tree-Lazy-Propagation)**<br>
 [template](https://docs.google.com/document/d/1lYzO9yA8irpCsG2a782awObOndtlUjAusC2iHV9Ea7E/edit#heading=h.cmhs406hkp1w)
@@ -506,6 +507,29 @@ void knapsack()
     cout<<mx<<endl;
 }
 
+```
+### MST Prim's
+```cpp
+            priority_queue<pair<ll,ll>>pq;
+            for(auto i:v[1]){
+                  cost[i.first]=min(cost[i.first],i.second);
+                  pq.push({-i.second,i.first});
+            }
+            int vis [n+4]={0};
+
+            while(pq.size()>0){
+                  auto ver = pq.top();
+                  pq.pop();
+                  int node = ver.second;
+                  ll co = -ver.first;
+                  if(vis[node])continue;
+                  vis[node]=1;
+                  cost[node]=co;
+                  for(auto vv:v[node]){
+                        if(cost[vv.first]>cost[node]+vv.second){
+                              pq.push({-(vv.second+cost[node]),vv.first});
+                        }
+                  }
 ```
 ### bit operations
 ### string algos
