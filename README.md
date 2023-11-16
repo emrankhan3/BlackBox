@@ -18,7 +18,7 @@
 **[Knapsack 2D](#Knapsack-2D)**<br> 
 **[Longest Increasing Subsequence](#LIS)**<br>
 **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br>
-**[Minimum Spanning Tree Prims](#MST-Prim's)**<br>
+**[Minimum Spanning Tree Prims](#MST-Prims)**<br>
 **[Segment Tree](#Segment-Tree)**<br>
 **[Segment Tree Lazy Propagation](#Segment-Tree-Lazy-Propagation)**<br>
 [template](https://docs.google.com/document/d/1lYzO9yA8irpCsG2a782awObOndtlUjAusC2iHV9Ea7E/edit#heading=h.cmhs406hkp1w)
@@ -508,7 +508,7 @@ void knapsack()
 }
 
 ```
-### MST Prim's
+### MST Prims
 ```cpp
             priority_queue<pair<ll,ll>>pq;
             for(auto i:v[1]){
