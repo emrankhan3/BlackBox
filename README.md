@@ -19,6 +19,7 @@
 **[Longest Increasing Subsequence](#LIS)**<br>
 **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br>
 **[Minimum Spanning Tree Prims](#MST-Prims)**<br>
+**[Policy Based Data Structure](#PBDS)**<br>
 **[Segment Tree](#Segment-Tree)**<br>
 **[Segment Tree Lazy Propagation](#Segment-Tree-Lazy-Propagation)**<br>
 [template](https://docs.google.com/document/d/1lYzO9yA8irpCsG2a782awObOndtlUjAusC2iHV9Ea7E/edit#heading=h.cmhs406hkp1w)
@@ -530,6 +531,23 @@ void knapsack()
                               pq.push({-(vv.second+cost[node]),vv.first});
                         }
                   }
+```
+### PDBS
+```cpp
+ #include "ext/pb_ds/assoc_container.hpp"
+ #include "ext/pb_ds/tree_policy.hpp"
+ //Header Files End
+
+ using namespace __gnu_pbds;
+ template<class T>
+ using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update> ;
+
+ template<class key, class value, class cmp = std::less<key>>
+ using ordered_map = tree<key, value, cmp, rb_tree_tag, tree_order_statistics_node_update>;
+ //find_by_order(k)  returns iterator to kth element starting from 0;
+ //order_of_key(k) returns count of elements strictly smaller than k;
+
+
 ```
 ### bit operations
 ### string algos
