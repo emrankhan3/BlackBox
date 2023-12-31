@@ -19,7 +19,7 @@
 **[Longest Increasing Subsequence](#LIS)**<br>
 **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br>
 **[Minimum Spanning Tree Prims](#MST-Prims)**<br>
-**[Policy Based Data Structure](#PBDS)**<br>
+**[PBDS](#PBDS)**<br>
 **[Segment Tree](#Segment-Tree)**<br>
 **[Segment Tree Lazy Propagation](#Segment-Tree-Lazy-Propagation)**<br>
 [template](https://docs.google.com/document/d/1lYzO9yA8irpCsG2a782awObOndtlUjAusC2iHV9Ea7E/edit#heading=h.cmhs406hkp1w)
