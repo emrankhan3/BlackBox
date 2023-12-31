@@ -19,7 +19,7 @@
 **[Longest Increasing Subsequence](#LIS)**<br>
 **[Maximum Xor Subarray](#Max-Xor-Subarray)**<br>
 **[Minimum Spanning Tree Prims](#MST-Prims)**<br>
-**[PBDS](#PBDS)**<br>
+**[Policy Based Data Structure](#PBDS)**<br>
 **[Segment Tree](#Segment-Tree)**<br>
 **[Segment Tree Lazy Propagation](#Segment-Tree-Lazy-Propagation)**<br>
 [template](https://docs.google.com/document/d/1lYzO9yA8irpCsG2a782awObOndtlUjAusC2iHV9Ea7E/edit#heading=h.cmhs406hkp1w)
@@ -532,7 +532,7 @@ void knapsack()
                         }
                   }
 ```
-### PDBS
+### PBDS
 ```cpp
  #include "ext/pb_ds/assoc_container.hpp"
  #include "ext/pb_ds/tree_policy.hpp"
